@@ -39,11 +39,11 @@ static const Rule rules[] = {
      */
     /* class				instance  title           tags mask  isfloating
        isterminal noswallow  monitor */
-    {"Vivaldi-stable", NULL, NULL, 1 << 1, 0, 0, 0, -1},
     {"St", NULL, NULL, 0, 0, 1, 0, -1},
     {NULL, NULL, "Event Tester", 0, 0, 0, 1, 0}, /* xev */
     {"ncmpcpp", NULL, NULL, 0, 1, 0, 0, 0},
     {"gotop", NULL, NULL, 0, 1, 0, 0, 0},
+    {"btop", NULL, NULL, 0, 1, 0, 0, 0},
     {"alsamixer", NULL, NULL, 0, 1, 0, 0, 0},
 };
 
@@ -116,6 +116,7 @@ static Key keys[] = {
     {MODKEY, XK_i, focusstack, {.i = -1}},
     {MODKEY, XK_z, incnmaster, {.i = +1}},
     {MODKEY | ShiftMask, XK_i, incnmaster, {.i = -1}},
+    {MODKEY | ShiftMask, XK_e, incnmaster, {.i = +1}},
     {MODKEY, XK_comma, setmfact, {.f = -0.05}},
     {MODKEY, XK_period, setmfact, {.f = +0.05}},
     {MODKEY, XK_space, zoom, {0}},
@@ -125,8 +126,8 @@ static Key keys[] = {
     {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
     {MODKEY, XK_f, setlayout, {.v = &layouts[1]}},
     {MODKEY, XK_m, setlayout, {.v = &layouts[2]}},
-    {MODKEY, XK_p, setlayout, {0}},
-    {MODKEY | ShiftMask, XK_p, togglefloating, {0}},
+    {MODKEY, XK_s, setlayout, {0}},
+    {MODKEY | ShiftMask, XK_s, togglefloating, {0}},
     {MODKEY, XK_0, view, {.ui = ~0}},
     {MODKEY, XK_0, tag, {.ui = ~0}},
     {MODKEY | ControlMask, XK_h, focusmon, {.i = -1}},
